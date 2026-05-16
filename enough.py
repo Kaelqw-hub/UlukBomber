@@ -15,12 +15,13 @@ for attribute in dir(SendSms):
 while 1:
     system("cls||clear")
     print("""{}
-     _  __              _ 
-    | |/ /             | |
-    | ' /  __ _   ___  | |
-    |  <  / _` | / _ \ | |
-    | . \| (_| ||  __/ | |
-    |_|\_\\__,_| \___| |_|
+ _    _ _      _    _ _  __
+| |  | | |    | |  | | |/ /
+| |  | | |    | |  | | ' / 
+| |  | | |    | |  | |  <  
+| |__| | |____| |__| | . \ 
+ \____/|______|\____/|_|\_\
+                            
     
     Sms: {}           {}by {}@Kaelqw-hub
     """.format(Fore.LIGHTCYAN_EX, len(servisler_sms), Style.RESET_ALL, Fore.LIGHTRED_EX))
