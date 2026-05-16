@@ -1,5 +1,6 @@
 # UlukBomber
-_Uluk hatrına_
+
+_Çeşitli yerlerden SMS gönderen uygulama_
 
 <h2>Kurulum</h2>
 
