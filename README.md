@@ -4,7 +4,7 @@ _Uluk hatrına_
 <h2>Kurulum</h2>
 
 ```console
-git https://github.com/Kaelqw-hub/UlukBomber.git
+git clone https://github.com/Kaelqw-hub/UlukBomber.git
 cd UlukBomber
 pip3 install -r requirements.txt
 python3 enough.py
