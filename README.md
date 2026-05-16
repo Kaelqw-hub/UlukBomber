@@ -7,7 +7,7 @@ _Uluk hatrına_
 git clone https://github.com/Kaelqw-hub/UlukBomber.git
 cd UlukBomber
 pip3 install -r requirements.txt
-python3 enough.py
+python3 baslat.py
 ```
 
 
