@@ -1,5 +1,5 @@
-# Enough
-_It's enough to make a man go crazy_
+# UlukBomber
+_Uluk hatrına_
 <br><br>
 [![Hits](https://hits.sh/github.com/tingirifistik/Enough-Reborn.svg?label=views&color=007ec6)](https://hits.sh/github.com/tingirifistik/Enough-Reborn/)
 
@@ -10,8 +10,8 @@ _It's enough to make a man go crazy_
 <h2>Kurulum</h2>
 
 ```console
-git clone https://github.com/tingirifistik/Enough-Reborn.git
-cd Enough-Reborn
+git https://github.com/Kaelqw-hub/UlukBomber.git
+cd UlukBomber
 pip3 install -r requirements.txt
 python3 enough.py
 ```
