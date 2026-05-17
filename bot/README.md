@@ -34,7 +34,7 @@ Bot'un çalışabilmesi için 'Privileged Gateway Intents' seçeneklerinin hepsi
 4- Bu id'yi *discord-selfbot-enough.py*'de *chat_id* kısmına yazınız. (int olarak)<br><br>
 **Not:** Eğer bot'u Discord sunucusunda kullanacaksanız, *channels*'dan sonra gelen, taksim ile ayrılmış iki sayıdan ikincisi sohbet id'nizdir.
 <br><br>
-**!! Son güncelleme 10 Şubat 2025'de yapılmış olup, bundan gayri yeni güncelleme gelmeyecektir. !!**
+
 
 📜YASAL AÇIKLAMA
 
